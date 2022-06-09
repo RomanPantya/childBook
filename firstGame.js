@@ -17,12 +17,19 @@ while (remainingLetters > 0) {
     } else if (guess.length !== 1) {
         alert("Please enter a single letter.");
     } else {
-        
+        let sms = '';
+
         for (let j = 0; j < word.length; j++) {
-            if (word[j] === guess) {
+            if (answerArray[j] === "_" && word[j] === guess) {
                 answerArray[j] = guess;
                 remainingLetters--;
+            } else if (answerArray[j] !== "_" && word[j] === guess) {
+                sms = 'This letter was guess!'
             }
+        }
+
+        if (sms) {
+            alert(sms);
         }
     }
 }
