@@ -33,6 +33,7 @@ while (remainingLetters > 0) {
         if (sms) {
             alert(sms);
         } else if (yes) {
+            alert("This letter is right!!!")
         } else {
             alert("This letter is wrong, try again!")
 
