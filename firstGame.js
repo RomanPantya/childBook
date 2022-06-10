@@ -17,12 +17,14 @@ while (remainingLetters > 0) {
     } else if (guess.length !== 1) {
         alert("Please enter a single letter.");
     } else {
-        let sms = '';
+        let sms = "";
+        let yes = "";
 
         for (let j = 0; j < word.length; j++) {
             if (answerArray[j] === "_" && word[j] === guess) {
                 answerArray[j] = guess;
                 remainingLetters--;
+                yes = "yes";
             } else if (answerArray[j] !== "_" && word[j] === guess) {
                 sms = 'This letter was guess!'
             }
@@ -30,6 +32,10 @@ while (remainingLetters > 0) {
 
         if (sms) {
             alert(sms);
+        } else if (yes) {
+        } else {
+            alert("This letter is wrong, try again!")
+
         }
     }
 }

@@ -1,5 +1,7 @@
-const words = ["Javascript", "monkey", "amazing", "pancake", "teacher"];
+function position(letter){
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-const word = words[Math.floor(Math.random() * words.length)];
+  return "Position of alphabet: " + (alphabet.indexOf(letter) + 1);
+  }
 
-console.log(word);
+  console.log(position("z"));
