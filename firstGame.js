@@ -1,4 +1,4 @@
-const words = ["javascript", "monkey", "amazing", "pancake", "teacher"];
+const words = ["javascript", "monkey", "amazing", "pancake", "teacher", "picnic", "mercuriy", "heart"];
 const word = words[Math.floor(Math.random() * words.length)];
 const answerArray = [];
 
@@ -7,8 +7,9 @@ for (let i = 0; i < word.length; i++) {
 }
 
 let remainingLetters = word.length;
+let count = 3;
 
-while (remainingLetters > 0) {
+while (remainingLetters > 0 && count > 0) {
     alert(answerArray.join(" "));
 
     let guess = prompt("Guess a letter, or click Cancel to stop playing");
@@ -21,22 +22,21 @@ while (remainingLetters > 0) {
         let yes = "";
 
         for (let j = 0; j < word.length; j++) {
-            if (answerArray[j] === "_" && word[j] === guess) {
-                answerArray[j] = guess;
+            if (answerArray[j] === "_" && word[j] === guess.toLocaleLowerCase()) {
+                answerArray[j] = guess.toLowerCase();
                 remainingLetters--;
                 yes = "yes";
-            } else if (answerArray[j] !== "_" && word[j] === guess) {
+            } else if (answerArray[j] !== "_" && word[j] === guess.toLowerCase()) {
                 sms = 'This letter was guess!'
             }
         }
-
         if (sms) {
             alert(sms);
         } else if (yes) {
             alert("This letter is right!!!")
         } else {
             alert("This letter is wrong, try again!")
-
+            count--;
         }
     }
 }
