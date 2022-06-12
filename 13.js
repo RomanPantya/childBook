@@ -5,6 +5,3 @@ function myPush(arr, ...params) {
   }
   return arr.length;
 };
-const a = [ 5, 8, 'wert'];
-console.log(myPush(a, 3, 8, 'rew'));
-console.log(a);

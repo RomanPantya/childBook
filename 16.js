@@ -7,11 +7,5 @@ function myUnshift(arr, ...params) {
             arr[i] = params[i];
         }
     }
-
     return arr.length;
-}
-const a = [4, 6, 'dfg'];
-
-console.log(myUnshift(a, 7, "dfg0", 5, "fgd"));
-
-console.log(a);
+};

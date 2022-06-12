@@ -1,11 +1,11 @@
 function myPop(arr) {
     const a = arr[arr.length - 1];
 
-    arr.length--;
+    if (arr.length !== 0) {
+        arr.length--;
+        return a;
 
-    return a;
+    } else {
+        return undefined;
+    }
 };
-const arr = [111];
-
-console.log(myPop(arr));
-console.log(arr);

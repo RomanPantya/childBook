@@ -5,4 +5,3 @@ function myFill(arr, a, start = 0, end = arr.length) {
         }
     return arr;
 };
-console.log(myFill([7, 'dfg0', 4, 6, 'dfg'], "Hi", 2));
