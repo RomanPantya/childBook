@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Playing with the DOM</title>
+</head>
+
+<body>
+
+    <h1 id="heading">Hello world</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+        let leftOffset = 0;
+
+        const moveHeading = function () {
+            $("#heading").offset({left: leftOffset});
+
+            leftOffset += 2;
+
+            if (leftOffset > 400) {
+                leftOffset = 0;
+            }
+        };
+
+        const intervalId = setInterval(moveHeading, 5);
+        clearInterval(intervalId);
+
+    </script>
+</body>
+</html>

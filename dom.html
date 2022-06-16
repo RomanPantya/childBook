@@ -10,9 +10,17 @@
     <h1 id="main-heading">Hello world</h1>
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script>
-     const newHeadingText = prompt("Please provide a new heading:");
-     $("#main-heading").text(newHeadingText);
+        $("h1").text("My friends");
+        const mass = ["Nikita", "Zevs", "Rusel", "Ann", "Danya"];
+
+        for (let i = 0; i < mass.length; i++) {
+          $("body").append("<p>" + mass[i] + "</p>");
+          $("p").last().fadeOut(1000).slideDown(3000).fadeIn(2000); 
+        };
+
+        $("p").append(" the best!");
     </script>
 
 </body>
+
 </html>

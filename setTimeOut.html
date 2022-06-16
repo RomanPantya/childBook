@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Playing with the DOM</title>
+</head>
+
+<body>
+
+    <h1 id="main-heading">Hello world</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+        let counter = 5;
+        const printMessage = function () {
+            console.log("You have been staring at your console for "
+                + counter + " seconds");
+            counter += 5;
+        };
+        const intervalId = setInterval(printMessage, 5000);
+        clearInterval(intervalId);
+
+    </script>
+
+</body>
+
+</html>
