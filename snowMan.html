@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+
+        
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        const drawSnowman = function(x, y) {
+        
+        ctx.strokeStyle = "SkyBlue";
+        ctx.fillStyle = "SkyBlue";
+        ctx.lineWidth = 4;
+        circle(x + 200, y + 200, 5, true);
+
+        circle(x + 200, y + 200, 50);
+
+        circle(x + 200, y + 120, 30);
+
+        circle(x + 200, y + 175, 5, true);
+
+        circle(x + 200, y + 225, 5, true);
+    
+        circle(x + 188, y + 110, 5, true);
+
+        circle(x + 212, y + 110, 5, true);
+
+        ctx.strokeStyle = "Orange";
+        ctx.fillStyle = "Orange";
+        circle(x + 200, y + 125, 5, true);
+        }
+
+       
+
+
+        function circle(x, y, radius, fillCircle) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+            if (fillCircle) {
+                ctx.fill();
+            }
+                ctx.stroke();
+            
+        };
+        drawSnowman(0, 0);
+        drawSnowman(100, 20);
+        drawSnowman(200, 40);
+
+    </script>
+</body>
+
+</html>
